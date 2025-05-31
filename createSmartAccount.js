@@ -10,7 +10,11 @@ const alchemyAccountClient = await createModularAccountAlchemyClient({
   signer: LocalAccountSigner.privateKeyToAccountSigner(process.env.PRIVATE_KEY),
 });
 
-console.log("Account Address --->> ", alchemyAccountClient.getAddress());
+console.log("Smart Account Address --->> ", alchemyAccountClient.getAddress());
+
+console.log(
+  "\n\n\n\n************************************* Send Transaction *************************************\n\n"
+);
 
 const hash = await alchemyAccountClient.sendUserOperation({
   uo: {
@@ -20,8 +24,11 @@ const hash = await alchemyAccountClient.sendUserOperation({
   },
 });
 
-console.log("hash --->> ", hash);
+console.log("Transaction hash Detail --->> ", hash);
 
 const tx = await alchemyAccountClient.waitForUserOperationTransaction(hash);
-console.log("tx --->> ", tx);
-console.log("tx --->> ", `https://sepolia.etherscan.io/tx/${tx}`);
+console.log("\n\ntx hash --->> ", tx);
+console.log(
+  "View tx on Explorer --->> ",
+  `https://sepolia.etherscan.io/tx/${tx}`
+);
