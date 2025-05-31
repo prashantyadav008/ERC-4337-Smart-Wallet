@@ -157,7 +157,7 @@ View tx on Explorer --->> https://sepolia.etherscan.io/tx/0xYourTransactionHash
 
 ## 📸 Sample Output Screenshot
 
-![Expected Output Screenshot](https://github.com/prashantyadav008/ERC-4337-Smart-Wallet/Expected_Output.png)
+![Expected Output Screenshot](https://github.com/prashantyadav008/ERC-4337-Smart-Wallet/blob/main/Expected_Output.png)
 
 ---
 
